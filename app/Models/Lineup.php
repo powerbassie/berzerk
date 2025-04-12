@@ -2,24 +2,28 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsTo;
 
 class Lineup extends Model
 {
-    use HasFactory;
+    protected $fillable = [
+        'id',
+        'event_id',
+        'artist_name',
+        'start_time',
+        'end_time',
+        'created_at',
+        'updated_at'
+    ];
 
-    protected $fillable = ['event_id', 'artist', 'start_time', 'end_time'];
+    protected $casts = [
+        'created_at' => 'datetime',
+        'updated_at' => 'datetime',
+    ];
 
-    public function event()
+    public function event(): BelongsTo
     {
         return $this->belongsTo(Event::class);
     }
-
-    public function artist()
-    {
-        // Zorg ervoor dat je hier de juiste Model-naam gebruikt
-        return $this->belongsTo(Artist::class);
-    }
-
 }

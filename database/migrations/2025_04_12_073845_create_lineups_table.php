@@ -6,25 +6,19 @@ use Illuminate\Support\Facades\Schema;
 
 return new class extends Migration
 {
-    /**
-     * Run the migrations.
-     */
-    public function up(): void
+    public function up()
     {
         Schema::create('lineups', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('event_id')->constrained()->onDelete('cascade');
-            $table->string('artist');
-            $table->time('start_time')->nullable();
-            $table->time('end_time')->nullable();
+            $table->foreignId('event_id')->constrained()->cascadeOnDelete();
+            $table->string('artist_name');
+            $table->time('start_time');
+            $table->time('end_time');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     */
-    public function down(): void
+    public function down()
     {
         Schema::dropIfExists('lineups');
     }
