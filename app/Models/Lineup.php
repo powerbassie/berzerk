@@ -15,4 +15,11 @@ class Lineup extends Model
     {
         return $this->belongsTo(Event::class);
     }
+
+    public function artist()
+    {
+        // Zorg ervoor dat je hier de juiste Model-naam gebruikt
+        return $this->belongsTo(Artist::class);
+    }
+
 }

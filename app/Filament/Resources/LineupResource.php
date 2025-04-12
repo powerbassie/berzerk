@@ -23,9 +23,9 @@ class LineupResource extends Resource
             Forms\Components\Select::make('event_id')
                 ->relationship('event', 'title')
                 ->required(),
-            Forms\Components\TextInput::make('artist')
-                ->required()
-                ->maxLength(255),
+            Forms\Components\Select::make('artist_id')
+                ->relationship('artist', 'name')
+                ->required(),
             Forms\Components\TimePicker::make('start_time')
                 ->required(),
             Forms\Components\TimePicker::make('end_time'),
