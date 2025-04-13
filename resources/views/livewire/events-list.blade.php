@@ -42,9 +42,10 @@
             </button>
         </div>
     </div>
-
+{{--@dd($events);--}}
     <div class="grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         @forelse($events as $event)
+
             <livewire:event-card :event="$event" :key="$event->id" />
         @empty
             <div class="col-span-full text-center py-12">

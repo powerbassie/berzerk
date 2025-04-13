@@ -31,7 +31,7 @@ class EventsList extends Component
 
     public function render()
     {
-        $events = Event::where('status', 'active')
+        $events = Event::where('status', 'confirmed')
             ->where(function ($query) {
                 $query->where('name', 'like', '%' . $this->search . '%')
                     ->orWhere('genre', 'like', '%' . $this->search . '%')

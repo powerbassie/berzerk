@@ -1,7 +1,7 @@
 <div class="flex flex-col rounded-lg shadow-lg overflow-hidden">
     <div class="flex-1 bg-white p-6 flex flex-col justify-between">
         <div class="flex-1">
-            <a href="{{ route('events.show', $event) }}" class="block">
+            <a href="{{ route('events.show', ['event' => $event->id]) }}" class="block">
                 <p class="text-xl font-semibold text-gray-900">{{ $event->name }}</p>
                 <p class="mt-3 text-base text-gray-500">
                     Genre: {{ $event->genre }}
@@ -40,7 +40,7 @@
                 </div>
             </div>
             <div class="mt-4">
-                <a href="{{ route('events.show', $event) }}" class="text-primary-600 hover:text-primary-500 font-medium">
+                <a href="{{ route('events.show', ['event' => $event->id]) }}" class="text-primary-600 hover:text-primary-500 font-medium">
                     Meer details &rarr;
                 </a>
             </div>

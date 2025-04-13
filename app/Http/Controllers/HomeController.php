@@ -9,7 +9,7 @@ class HomeController extends Controller
 {
     public function index(): View
     {
-        $upcomingEvents = Event::where('status', 'active')
+        $upcomingEvents = Event::where('status', 'confirmed')
             ->where('date', '>=', now()->format('Y-m-d'))
             ->orderBy('date')
             ->limit(3)
