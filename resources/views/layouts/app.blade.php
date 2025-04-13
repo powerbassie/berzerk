@@ -20,14 +20,14 @@
 <body class="font-sans antialiased bg-gray-100">
 <div class="min-h-screen">
     <!-- Navigation -->
-    <nav class="bg-white shadow">
+    <nav class="bg-white shadow" style="min-height: 120px">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
 
                         <a href="{{ route('home') }}" class="text-2xl font-bold text-primary-600">
-                            <img src="https://berzerk-events.nl/images/Berzerk_logo_trans.png" alt="" style="max-width:200px">
+                            <img src="https://berzerk-events.nl/images/Berzerk_logo_trans.png" alt="" style="max-width:200px; margin-top: 60px;">
                         </a>
                     </div>
                     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
