@@ -49,30 +49,30 @@
                         </div>
                     </div>
 
-                    @if($event->artists->count() > 0)
+{{--                    @if($event->artists->count() > 0)--}}
                         <div class="mt-8 border-t border-gray-200 pt-8">
                             <h2 class="text-xl font-bold text-gray-900">Line-up</h2>
                             <div class="mt-4 space-y-6">
-                                @foreach($event->artists as $artist)
+{{--                                @foreach($event->artists as $artist)--}}
                                     <div class="flex">
-                                        @if($artist->image)
+{{--                                        @if($artist->image)--}}
                                             <div class="flex-shrink-0">
-                                                <img class="h-12 w-12 rounded-full" src="{{ asset('storage/' . $artist->image) }}" alt="{{ $artist->name }}">
+{{--                                                <img class="h-12 w-12 rounded-full" src="{{ asset('storage/' . $artist->image) }}" alt="{{ $artist->name }}">--}}
                                             </div>
-                                        @endif
-                                        <div class="{{ $artist->image ? 'ml-4' : '' }}">
-                                            <div class="text-sm font-medium text-gray-900">{{ $artist->name }}</div>
-                                            @if($artist->bio)
+{{--                                        @endif--}}
+{{--                                        <div class="{{ $artist->image ? 'ml-4' : '' }}">--}}
+{{--                                            <div class="text-sm font-medium text-gray-900">{{ $artist->name }}</div>--}}
+{{--                                            @if($artist->bio)--}}
                                                 <div class="mt-1 text-sm text-gray-500">
-                                                    {{ Str::limit($artist->bio, 100) }}
+{{--                                                    {{ Str::limit($artist->bio, 100) }}--}}
                                                 </div>
-                                            @endif
+{{--                                            @endif--}}
                                         </div>
                                     </div>
-                                @endforeach
+{{--                                @endforeach--}}
                             </div>
                         </div>
-                    @endif
+{{--                    @endif--}}
 
                     <div class="mt-8">
                         <a href="{{ route('events.index') }}" class="text-primary-600 hover:text-primary-500">

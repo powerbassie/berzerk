@@ -14,12 +14,8 @@ class EventController extends Controller
 
     public function show(Event $event): View
     {
-        if (!$event->is_published) {
-            abort(404);
-        }
-
         return view('events.show', [
-            'event' => $event,
+            'event' => $event
         ]);
     }
 }

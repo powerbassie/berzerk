@@ -7,6 +7,7 @@ use App\Enums\EventStatus;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 use Illuminate\Database\Eloquent\Relations\HasMany;
+use Illuminate\Support\Str;
 
 class Event extends Model
 {
@@ -15,14 +16,33 @@ class Event extends Model
     protected $fillable = [
         'id',
         'name',
+        'slug',
         'date',
         'location',
         'genre',
         'ticket_count',
         'status',
-        'created_at',
-        'updated_at',
     ];
+
+    protected static function boot(): void
+    {
+        parent::boot();
+
+        static::creating(function ($event) {
+            $event->slug = Str::slug($event->name);
+        });
+
+        static::updating(function ($event) {
+            $event->slug = Str::slug($event->name);
+        });
+    }
+
+    public function getRouteKeyName(): string
+    {
+        return 'slug';
+    }
+
+
 
     protected $casts = [
         'date' => 'datetime',
