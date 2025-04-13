@@ -4,7 +4,7 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="relative bg-primary-700" style="min-height:800px;">
+    <div class="relative bg-primary-700 banner">
         <div class="absolute inset-0">
             <img class="w-full h-full object-cover" src="https://berzerk-events.nl/images/berzerk_website.png" alt="People enjoying a concert">
             <div class="absolute inset-0 bg-primary-700 mix-blend-multiply" aria-hidden="true"></div>
@@ -46,7 +46,7 @@
 
         @if(count($upcomingEvents) > 0)
             <div class="mt-12 text-center">
-                <a href="{{ route('events.index') }}" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700">
+                <a href="{{ route('events.index') }}" class="inline-flex items-center px-4 py-2 border border-transparent text-base font-medium rounded-md shadow-sm text-white bg-primary-600 hover:bg-primary-700 all_events_button">
                     Bekijk alle events
                 </a>
             </div>

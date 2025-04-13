@@ -11,3 +11,21 @@
     -webkit-box-orient: vertical;
     -webkit-line-clamp: 3;
 }
+
+.white_bar {
+    min-height: 120px;
+}
+
+.banner {
+    min-height: 800px;
+}
+
+.all_events_button {
+    background-color: black;
+}
+
+@media only screen and (max-width: 600px) {
+    .banner {
+        min-height: 220px;
+    }
+}
