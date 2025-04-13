@@ -3,6 +3,7 @@
 @section('title', $event->title)
 
 @section('content')
+
     <div class="bg-white overflow-hidden">
         <div class="relative max-w-7xl mx-auto py-16 px-4 sm:px-6 lg:px-8">
             <div class="hidden lg:block bg-gray-50 absolute top-0 bottom-0 left-3/4 w-screen"></div>
@@ -37,7 +38,7 @@
                     <div class="relative text-base mx-auto max-w-prose lg:max-w-none">
                         <figure>
                             <div class="aspect-w-12 aspect-h-7 lg:aspect-none">
-                                <img class="rounded-lg shadow-lg object-cover object-center" src="{{ $event->image ? asset('storage/' . $event->image) : 'https://images.unsplash.com/photo-1470225620780-dba8ba36b745?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80' }}" alt="{{ $event->title }}" width="1184" height="1376">
+                                <img class="rounded-lg shadow-lg object-cover object-center" src="{{ $event->image ? asset('storage/' . $event->image) : 'https://scontent.frtm1-2.fna.fbcdn.net/v/t39.30808-6/488195832_1162863158970990_2503064024759036818_n.jpg?_nc_cat=103&ccb=1-7&_nc_sid=cc71e4&_nc_ohc=3aicbZ-bhV0Q7kNvwHlIBOW&_nc_oc=AdmVoAIFQp461lP2H5WFqdzfQD1K-CBRTrt0_IPOU05nFZqj5WjLBxWIuHiHqkzJMkY&_nc_zt=23&_nc_ht=scontent.frtm1-2.fna&_nc_gid=VfxKy_0ZYfbfWCg3RddYzw&oh=00_AfGerHE1opdmcvGSsJq1ZTmSjR9eVi8OIuUwTQKSt0f4ew&oe=6801CD1C' }}" alt="{{ $event->title }}" width="1184" height="1376">
                             </div>
                         </figure>
                     </div>
@@ -49,30 +50,13 @@
                         </div>
                     </div>
 
-{{--                    @if($event->artists->count() > 0)--}}
-                        <div class="mt-8 border-t border-gray-200 pt-8">
-                            <h2 class="text-xl font-bold text-gray-900">Line-up</h2>
-                            <div class="mt-4 space-y-6">
-{{--                                @foreach($event->artists as $artist)--}}
-                                    <div class="flex">
-{{--                                        @if($artist->image)--}}
-                                            <div class="flex-shrink-0">
-{{--                                                <img class="h-12 w-12 rounded-full" src="{{ asset('storage/' . $artist->image) }}" alt="{{ $artist->name }}">--}}
-                                            </div>
-{{--                                        @endif--}}
-{{--                                        <div class="{{ $artist->image ? 'ml-4' : '' }}">--}}
-{{--                                            <div class="text-sm font-medium text-gray-900">{{ $artist->name }}</div>--}}
-{{--                                            @if($artist->bio)--}}
-                                                <div class="mt-1 text-sm text-gray-500">
-{{--                                                    {{ Str::limit($artist->bio, 100) }}--}}
-                                                </div>
-{{--                                            @endif--}}
-                                        </div>
-                                    </div>
-{{--                                @endforeach--}}
-                            </div>
-                        </div>
-{{--                    @endif--}}
+                    <h2>Artiesten</h2>
+                    <ul>
+                        @foreach ($event->lineups as $lineup)
+                            <li>
+                               -  {{ $lineup->artist_name }} ({{ $lineup->start_time }} - {{ $lineup->end_time }})
+                            </li>
+                        @endforeach
 
                     <div class="mt-8">
                         <a href="{{ route('events.index') }}" class="text-primary-600 hover:text-primary-500">

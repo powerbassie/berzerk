@@ -4,15 +4,15 @@
 
 @section('content')
     <!-- Hero Section -->
-    <div class="relative bg-primary-700">
+    <div class="relative bg-primary-700" style="min-height:800px;">
         <div class="absolute inset-0">
-            <img class="w-full h-full object-cover" src="https://images.unsplash.com/photo-1492684223066-81342ee5ff30?ixlib=rb-1.2.1&auto=format&fit=crop&w=1650&q=80" alt="People enjoying a concert">
+            <img class="w-full h-full object-cover" src="https://berzerk-events.nl/images/berzerk_website.png" alt="People enjoying a concert">
             <div class="absolute inset-0 bg-primary-700 mix-blend-multiply" aria-hidden="true"></div>
         </div>
         <div class="relative max-w-7xl mx-auto py-24 px-4 sm:py-32 sm:px-6 lg:px-8">
-            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Ontdek de beste events</h1>
+            <h1 class="text-4xl font-extrabold tracking-tight text-white sm:text-5xl lg:text-6xl">Underground music only!</h1>
             <p class="mt-6 text-xl text-primary-100 max-w-3xl">
-                Vind de leukste evenementen en geniet van de beste DJ's in jouw buurt.
+
             </p>
             <div class="mt-10">
                 <a href="{{ route('events.index') }}" class="inline-flex items-center px-6 py-3 border border-transparent text-base font-medium rounded-md shadow-sm text-primary-700 bg-white hover:bg-primary-50">
@@ -59,10 +59,10 @@
             <div class="lg:text-center">
                 <h2 class="text-base text-primary-600 font-semibold tracking-wide uppercase">Voordelen</h2>
                 <p class="mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl">
-                    Waarom onze events?
+                    Waarom Berzerk?
                 </p>
                 <p class="mt-4 max-w-2xl text-xl text-gray-500 lg:mx-auto">
-                    Ontdek waarom onze evenementen de beste ervaring bieden.
+
                 </p>
             </div>
 
@@ -75,10 +75,10 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19V6l12-3v13M9 19c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zm12-3c0 1.105-1.343 2-3 2s-3-.895-3-2 1.343-2 3-2 3 .895 3 2zM9 10l12-3" />
                                 </svg>
                             </div>
-                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Topklasse DJ's</p>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Meest unieke DJ's</p>
                         </dt>
                         <dd class="mt-2 ml-16 text-base text-gray-500">
-                            We werken alleen samen met de beste DJ's die garant staan voor een onvergetelijke avond.
+                            Enkel de meest toffe underground dj's.
                         </dd>
                     </div>
 
@@ -93,7 +93,7 @@
                             <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Unieke locaties</p>
                         </dt>
                         <dd class="mt-2 ml-16 text-base text-gray-500">
-                            Onze events vinden plaats op zorgvuldig geselecteerde locaties met de perfecte sfeer.
+                            Underground (berlin-style) locaties.
                         </dd>
                     </div>
 
@@ -104,10 +104,10 @@
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
                                 </svg>
                             </div>
-                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Geweldige sfeer</p>
+                            <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Goed geluid</p>
                         </dt>
                         <dd class="mt-2 ml-16 text-base text-gray-500">
-                            De perfecte mix van muziek, licht en geluid zorgt voor een onvergetelijke ervaring.
+                            Onze vrienden van Teknoise23, System ongehoorzaam leveren meer dan 30 kilowatt geluid!!
                         </dd>
                     </div>
 
@@ -121,7 +121,7 @@
                             <p class="ml-16 text-lg leading-6 font-medium text-gray-900">Regelmatige events</p>
                         </dt>
                         <dd class="mt-2 ml-16 text-base text-gray-500">
-                            We organiseren regelmatig nieuwe events, zodat er altijd iets te beleven valt.
+                            1-3 Events per jaar.
                         </dd>
                     </div>
                 </dl>

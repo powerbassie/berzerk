@@ -25,8 +25,9 @@
             <div class="flex justify-between h-16">
                 <div class="flex">
                     <div class="flex-shrink-0 flex items-center">
+
                         <a href="{{ route('home') }}" class="text-2xl font-bold text-primary-600">
-                            {{ config('app.name', 'Events') }}
+                            <img src="https://berzerk-events.nl/images/Berzerk_logo_trans.png" alt="" style="max-width:200px">
                         </a>
                     </div>
                     <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
