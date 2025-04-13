@@ -1,5 +1,5 @@
-# berzerk
-underground music events
+# Berzerk-events
+Underground music events management system
 
 Vereisten
 - PHP (versie 8.1+)
