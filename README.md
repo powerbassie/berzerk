@@ -35,7 +35,7 @@ DB_DATABASE=DB_name
 DB_USERNAME=DB_user
 DB_PASSWORD=DB_pass
 
-APP_URL=http://localhost (evt berzer-events.test)
+APP_URL=http://localhost (eventueel berzerk-events.test)
 
 Stap 5: Applicatiesleutel Genereren
 Genereer een unieke applicatiesleutel:
