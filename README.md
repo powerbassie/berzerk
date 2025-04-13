@@ -9,10 +9,9 @@ Vereisten
 - Git 
 
 Instructies 
+
 Stap 1: Repository Klonen
 Kloon de repository naar je lokale machine:
-
-bash
 git clone https://github.com/powerbassie/berzerk.git
 cd berzerk
 
