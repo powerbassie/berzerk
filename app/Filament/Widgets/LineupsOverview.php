@@ -8,6 +8,7 @@ use Filament\Widgets\StatsOverviewWidget\Stat;
 
 class LineupsOverview extends BaseWidget
 {
+    protected int | string | array $columnSpan = 1;
     protected function getStats(): array
     {
         return [
